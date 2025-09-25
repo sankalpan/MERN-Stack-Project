@@ -17,7 +17,8 @@ export default function News() {
       setLoading(true);
       try {
         const res = await fetch(
-          `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=7c9f55f53f0f4bd691bd2d93cc933349`
+          // `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=7c9f55f53f0f4bd691bd2d93cc933349`
+           `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=a8d23508ebfd4fe4bc4614fc7032f8cb`
         );
         const data = await res.json();
         setArticles(data.articles);
@@ -118,3 +119,4 @@ export default function News() {
     </div>
   );
 }
+
