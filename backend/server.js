@@ -5,6 +5,7 @@ require("dotenv").config();
 
 const authRoutes = require("./routes/auth");
 const bookmarkRoutes = require("./routes/bookmarks");
+const newsRoutes = require("./routes/newsRoutes");
 
 const app = express();
 app.use(cors());
@@ -12,6 +13,7 @@ app.use(express.json());
 
 app.use("/api", authRoutes);
 app.use("/api/bookmarks", bookmarkRoutes);
+app.use("/api", newsRoutes);
 
 app.get('/', (req, res) => {
   res.send('API is running');
