@@ -9,6 +9,13 @@ const newsRoutes = require("./routes/newsRoutes");
 
 const app = express();
 app.use(cors());
+
+app.use(
+  cors({
+    origin: process.env.FRONTEND_URL, // allow frontend domain
+    credentials: true, // allow cookies/auth headers
+  })
+);
 app.use(express.json());
 
 app.use("/api", authRoutes);
