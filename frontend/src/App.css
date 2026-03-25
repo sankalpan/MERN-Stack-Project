@@ -90,3 +90,64 @@ body {
   border-color: #14537d;
 }
 
+.footer {
+  background: linear-gradient(135deg, rgba(1, 21, 42, 0.9), rgba(12, 48, 78, 0.9));
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  color: #d4e7ff;
+  padding: 2rem 1.2rem;
+  margin-top: auto;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1 1 280px;
+  min-width: 250px;
+}
+
+.footer-section h3 {
+  margin-bottom: 0.7rem;
+  color: #b6ddff;
+}
+
+.footer-section p {
+  margin: 0.35rem 0;
+  line-height: 1.45;
+}
+
+.footer-section .socials {
+  margin-top: 0.7rem;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.footer-section .socials a {
+  color: #eaf6ff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 0.35rem 0.65rem;
+  border-radius: 7px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.footer-section .socials a:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-bottom {
+  margin-top: 1.4rem;
+  text-align: center;
+  font-size: 0.86rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  padding-top: 0.75rem;
+  color: #c9def6;
+}
+
