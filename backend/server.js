@@ -17,10 +17,34 @@ const allowedOrigins = [
   "https://news-monkey-project.onrender.com",
   "https://news-monkey-project1.onrender.com",
   process.env.FRONTEND_URL,
+  // Add Vercel domains
+  /^https:\/\/.*\.vercel\.app$/,
 ].filter(Boolean);
 
 // Temporary: allow all origins during debugging. Remove before production.
-app.use(cors());
+app.use(cors({
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+
+    // Check if the origin is in the allowed list
+    const isAllowed = allowedOrigins.some(allowedOrigin => {
+      if (typeof allowedOrigin === 'string') {
+        return allowedOrigin === origin;
+      } else if (allowedOrigin instanceof RegExp) {
+        return allowedOrigin.test(origin);
+      }
+      return false;
+    });
+
+    if (isAllowed) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true
+}));
 
 app.use(express.json());
 
