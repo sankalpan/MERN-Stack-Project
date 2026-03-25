@@ -1,5 +1,21 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f1f7fa;
+  background-image:
+    linear-gradient(rgba(3, 38, 57, 0.75), rgba(0, 0, 0, 0.65)),
+    url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .App {
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .App-logo {
@@ -36,9 +52,41 @@
     transform: rotate(360deg);
   }
 }
+
+.card {
+  background: linear-gradient(135deg, rgba(23, 39, 63, 0.95), rgba(35, 82, 122, 0.85));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  color: #f5f8fb;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
 .card:hover {
   transform: scale(1.02);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
   cursor: pointer;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.card-body {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.card-title,
+.card-text {
+  color: #edf6ff;
+}
+
+.btn-dark {
+  background-color: #0e4d7d;
+  border-color: #0e4d7d;
+  color: #f2f9ff;
+}
+
+.btn-dark:hover {
+  background-color: #14537d;
+  border-color: #14537d;
 }
 
