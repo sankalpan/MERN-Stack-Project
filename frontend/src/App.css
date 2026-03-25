@@ -187,3 +187,18 @@ body {
   color: #fff;
 }
 
+.navbar-nav .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: 0.28rem 0.75rem;
+  margin-top: 0.15rem;
+  margin-left: 0.5rem;
+}
+
+.navbar-nav .nav-item {
+  display: flex;
+  align-items: center;
+}
+
